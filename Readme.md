@@ -5,6 +5,8 @@
 
 **Reddit Post Filter** is a simple, privacy-friendly Firefox extension that hides Reddit posts containing unwanted keywords. Take control of your Reddit feed by filtering out distractions, spoilers, or topics you're not interested in.
 
+![Reddit Post Filter Screenshot](https://raw.githubusercontent.com/VijayKumarDVK96/Reddit-Posts-Filter/refs/heads/main/images/screenshot.png)
+
 
 ## 🚀 Features
 
@@ -23,6 +25,19 @@
 3. Click **Add** – the keyword is now on your blacklist.
 4. Reddit posts containing any blacklisted words will be hidden automatically.
 5. Use **Export** to download and make a local backup, since no cloud backup available.
+
+
+
+## 🧩 Local Installation (Manual for Developers)
+
+To install the extension manually in Firefox:
+
+1. [Download the latest ZIP file](https://github.com/VijayKumarDVK96/Reddit-Posts-Filter/releases/latest).
+2. Open Firefox and go to `about:debugging#/runtime/this-firefox`.
+3. Click **Load Temporary Add-on...**.
+4. Select the .zip file from your local computer and upload.
+5. The extension will now be loaded temporarily. It will be removed when you close or restart Firefox, so repeat these steps to reload.
+
 
 ## ❤️ Support This Project
 
