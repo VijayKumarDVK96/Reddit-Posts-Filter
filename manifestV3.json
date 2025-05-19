@@ -20,8 +20,7 @@
             "48": "images/icons/icon48.png",
             "128": "images/icons/icon128.png"
         },
-        "default_title": "Manage Blacklist Keywords",
-        "default_popup": "popup.html"
+        "default_title": "Manage Blacklist Keywords"
     },
     "content_scripts": [
         {

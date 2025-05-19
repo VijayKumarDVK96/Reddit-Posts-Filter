@@ -1,9 +1,9 @@
 
-# 🔥 Reddit Post Filter – Browser Extension for Firefox
+# 🔥 Reddit Post Filter – Browser Extension for Google Chrome and Mozilla Firefox
 
   
 
-**Reddit Post Filter** is a simple, privacy-friendly Firefox extension that hides Reddit posts containing unwanted keywords. Take control of your Reddit feed by filtering out distractions, spoilers, or topics you're not interested in.
+**Reddit Post Filter** is a simple, privacy-friendly for Chrome and Firefox extension that hides Reddit posts containing unwanted keywords. Take control of your Reddit feed by filtering out distractions, spoilers, or topics you're not interested in.
 
 ![Reddit Post Filter Screenshot](https://raw.githubusercontent.com/VijayKumarDVK96/Reddit-Posts-Filter/refs/heads/main/images/screenshot.png)
 
@@ -20,7 +20,7 @@
 ## 🛠️ How to Use
 
   
-1. Click the extension icon in your Firefox toolbar.
+1. Click the extension icon in your Chrome or Firefox toolbar.
 2. Enter a keyword in the input box (e.g., "spoilers", "politics").
 3. Click **Add** – the keyword is now on your blacklist.
 4. Reddit posts containing any blacklisted words will be hidden automatically.
@@ -32,11 +32,21 @@
 
 To install the extension manually in Firefox:
 
-1. [Download the latest ZIP file](https://github.com/VijayKumarDVK96/Reddit-Posts-Filter/releases/latest).
+1. [Download the latest firefox-build.zip file](https://github.com/VijayKumarDVK96/Reddit-Posts-Filter/releases/latest).
 2. Open Firefox and go to `about:debugging#/runtime/this-firefox`.
 3. Click **Load Temporary Add-on...**.
 4. Select the .zip file from your local computer and upload.
 5. The extension will now be loaded temporarily. It will be removed when you close or restart Firefox, so repeat these steps to reload.
+
+
+### Chrome Installation (Manual for Developers)
+
+1. [Download the latest chrome-build.zip file](https://github.com/VijayKumarDVK96/Reddit-Posts-Filter/releases/latest) and extract it to a folder.
+2. Open Chrome and go to `chrome://extensions/`.
+3. Enable **Developer mode** (toggle in the top right).
+4. Click **Load unpacked** and select the extracted folder.
+5. The extension will now appear in your Chrome extensions list.
+
 
 
 ## ❤️ Support This Project

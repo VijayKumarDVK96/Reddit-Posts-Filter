@@ -1,6 +1,4 @@
 // popup.js
-console.log('🧹 Reddit Filter popup.js loaded');
-
 const keywordInput = document.getElementById('keywordInput');
 const addBtn = document.getElementById('addBtn');
 const blacklistEl = document.getElementById('blacklist');
@@ -54,7 +52,6 @@ function renderList(keywords) {
 function loadAndRender() {
   chrome.storage.local.get(['blacklist'], result => {
     currentKeywords = Array.isArray(result.blacklist) ? result.blacklist : [];
-    console.log('Loaded blacklist:', currentKeywords);
     renderList(currentKeywords);
   });
 }
@@ -108,7 +105,6 @@ importInput.onchange = e => {
       }
       chrome.storage.local.set({ blacklist: data }, () => {
         currentKeywords = data;
-        console.log('Imported list:', data);
         renderList(data);
       });
     } catch (err) {

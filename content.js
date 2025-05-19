@@ -14,37 +14,32 @@ function hideMatchingPosts(blacklist) {
   });
 }
 
-// Observe for new posts being loaded dynamically
-const observer = new MutationObserver(() => {
+function loadAndApplyBlacklist() {
   chrome.storage.local.get(['blacklist'], result => {
     const blacklist = result.blacklist || [];
     hideMatchingPosts(blacklist);
   });
-});
+}
 
+// Observe for new posts being loaded dynamically
+const observer = new MutationObserver(() => {
+  loadAndApplyBlacklist();
+});
 observer.observe(document.body, { childList: true, subtree: true });
 
-// Initial load
-chrome.storage.local.get(['blacklist'], result => {
-  const blacklist = result.blacklist || [];
-  hideMatchingPosts(blacklist);
-});
+// Initial run
+loadAndApplyBlacklist();
 
+// Listen for changes to the blacklist and apply them
+function handleStorageChange(changes, area) {
+  if (area === 'local' && changes.blacklist) {
+    const updatedBlacklist = (changes.blacklist.newValue || []).map(k => k.toLowerCase().trim());
+    hideMatchingPosts(updatedBlacklist);
+  }
+}
 
 if (typeof browser !== 'undefined') {
-  browser.storage.onChanged.addListener((changes, area) => {
-    if (area === 'local' && changes.blacklist) {
-      blacklist = (changes.blacklist.newValue || []).map(k => k.toLowerCase().trim()).sort();
-      console.log('Blacklist updated:', blacklist);
-      hideMatchingPosts();
-    }
-  });
+  browser.storage.onChanged.addListener(handleStorageChange);
 } else {
-  chrome.storage.onChanged.addListener((changes, area) => {
-    if (area === 'local' && changes.blacklist) {
-      blacklist = (changes.blacklist.newValue || []).map(k => k.toLowerCase().trim()).sort();
-      console.log('Blacklist updated:', blacklist);
-      hideMatchingPosts();
-    }
-  });
+  chrome.storage.onChanged.addListener(handleStorageChange);
 }
