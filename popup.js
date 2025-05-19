@@ -22,7 +22,7 @@ function renderList(keywords) {
     filtered = keywords.filter(word => word[0] && word[0].toUpperCase() === currentLetter);
   }
 
-  if (filtered.length > 1) {
+  if (filtered.length >= 1) {
     blacklistPlaceholder.style.display = 'none';
     blacklistEl.classList.add('blacklist');
   } else {
@@ -79,7 +79,9 @@ addBtn.onclick = () => {
 // Export JSON
 exportBtn.onclick = () => {
   chrome.storage.local.get(['blacklist'], result => {
-    const data = JSON.stringify(result.blacklist || []);
+    let list = Array.isArray(result.blacklist) ? result.blacklist : [];
+    list = list.map(word => word.toLowerCase()).sort((a, b) => a.localeCompare(b));
+    const data = JSON.stringify(list);
     const blob = new Blob([data], { type: 'application/json' });
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
