@@ -32,7 +32,7 @@
 
 To install the extension manually in Firefox:
 
-1. [Download the latest firefox-build.zip file](https://github.com/VijayKumarDVK96/Reddit-Posts-Filter/releases/latest).
+1. [Download the latest firefox-build.zip file](https://github.com/VijayKumarDVK96/Reddit-Posts-Filter/releases/download/v1/firefox-build.zip).
 2. Open Firefox and go to `about:debugging#/runtime/this-firefox`.
 3. Click **Load Temporary Add-on...**.
 4. Select the .zip file from your local computer and upload.
@@ -41,7 +41,7 @@ To install the extension manually in Firefox:
 
 ### Chrome Installation (Manual for Developers)
 
-1. [Download the latest chrome-build.zip file](https://github.com/VijayKumarDVK96/Reddit-Posts-Filter/releases/latest) and extract it to a folder.
+1. [Download the latest chrome-build.zip file](https://github.com/VijayKumarDVK96/Reddit-Posts-Filter/archive/refs/tags/v1.2.zip) and extract it to a folder.
 2. Open Chrome and go to `chrome://extensions/`.
 3. Enable **Developer mode** (toggle in the top right).
 4. Click **Load unpacked** and select the extracted folder.
