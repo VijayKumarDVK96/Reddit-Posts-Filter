@@ -1,0 +1,211 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  place-items: center;
+}
+
+.container {
+  width: 1000px;
+  height: 100vh;
+  padding: 15px;
+  background-color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+header {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #ff4500;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+header p {
+  color: #666;
+  font-size: 0.9rem;
+  margin: 15px 0;
+  font-style: italic;
+  font-weight: 700;
+}
+
+.reddit_img {
+  height: 50px;
+}
+
+.input-group {
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.input-group input {
+  padding: 6px 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  min-width: 250px;
+  height: 45px;
+}
+
+.input-group button {
+  padding: 6px 10px;
+  background-color: #ff4500;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  height: 45px;
+  width: 60px;
+}
+
+.blacklist {
+  padding: 5px;
+  border: 1px solid #ddd;
+  max-height: 400px;
+  overflow-y: auto;
+  margin: 30px 0;
+  margin-bottom: 15px;
+}
+
+#blacklist li {
+  display: inline-flex;
+  align-items: center;
+  background-color: #f9f9f9;
+  padding: 6px 10px;
+  margin: 3px;
+  border: 1px solid #eee;
+  border-radius: 4px;
+  white-space: nowrap;
+}
+
+#blacklist_placeholder {
+  height: 400px;
+  background: #e0e0e0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  margin: 20px 0;
+}
+
+#blacklist_placeholder span {
+  font-size: 1.2em;
+  color: #555;
+}
+
+.remove-btn {
+  margin-left: 8px;
+  font-size: 0.8rem;
+  color: #ff4500;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.import-export {
+  display: inline-flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin: 10px 0;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.import-export button {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #ddd;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.import-export button:hover {
+  background-color: #f0f0f0;
+}
+
+.import-export button:nth-child(1) {
+  background-color: #4caf50;
+}
+
+.import-export button:nth-child(2) {
+  background-color: #1B9CFC;
+}
+
+.donation-message {
+  text-align: center;
+  color: #444;
+  font-size: 0.85rem;
+  line-height: 1.4;
+}
+
+.buymeacoffee {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.alphabet-filter {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 20px 0 10px 0;
+}
+
+.alphabet-filter span {
+  font-size: 0.95rem;
+  color: #444;
+  font-weight: 600;
+  margin-right: 8px;
+}
+
+.alpha-btn {
+  background-color: #fff;
+  color: #ff4500;
+  border: 1px solid #ff4500;
+  border-radius: 4px;
+  padding: 5px 12px;
+  margin: 2px 0;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+}
+
+.alpha-btn:hover,
+.alpha-btn.active {
+  background-color: #ff4500;
+  color: #fff;
+}
+
+.alpha-btn[data-letter="all"] {
+  font-weight: bold;
+  border-color: #1B9CFC;
+  color: #1B9CFC;
+}
+
+.alpha-btn[data-letter="all"]:hover,
+.alpha-btn[data-letter="all"].active {
+  background-color: #1B9CFC;
+  color: #fff;
+}

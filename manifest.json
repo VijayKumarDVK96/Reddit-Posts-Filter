@@ -1,0 +1,42 @@
+{
+    "manifest_version": 2,
+    "name": "Reddit Post Filter",
+    "version": "1.0",
+    "description": "Hides Reddit posts containing blacklisted keywords stored in local storage.",
+    "permissions": [
+        "storage",
+        "tabs",
+        "activeTab",
+        "scripting",
+        "*://www.reddit.com/*"
+    ],
+    "background": {
+        "scripts": [
+            "background.js"
+        ]
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "*://www.reddit.com/*"
+            ],
+            "js": [
+                "content.js"
+            ],
+            "run_at": "document_idle"
+        }
+    ],
+    "browser_action": {
+        "default_icon": {
+            "16": "images/icons/icon16.jpeg",
+            "48": "images/icons/icon48.jpeg",
+            "128": "images/icons/icon128.jpeg"
+        },
+        "default_title": "Manage Blacklist Keywords"
+    },
+    "icons": {
+        "16": "images/icons/icon16.jpeg",
+        "48": "images/icons/icon48.jpeg",
+        "128": "images/icons/icon128.jpeg"
+    }
+}
