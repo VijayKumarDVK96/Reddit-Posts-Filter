@@ -1,7 +1,7 @@
 {
     "manifest_version": 2,
     "name": "Reddit Post Filter",
-    "version": "1.0",
+    "version": "1.1",
     "description": "Hides Reddit posts containing blacklisted keywords stored in local storage.",
     "permissions": [
         "storage",
